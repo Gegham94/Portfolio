@@ -1,0 +1,23 @@
+@import 'src/assets/styles/variables/colors';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  color: $white;
+  font-weight: 600;
+  .copyright {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .item {
+      margin: 0 10px;
+    }
+  }
+}
