@@ -1,4 +1,4 @@
-@import 'src/assets/styles/variables/colors';
+@import 'src/assets/styles/colors';
 
 .header {
   position: absolute;
@@ -21,15 +21,38 @@
 .menue_side {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
   height: 60px;
   display: flex;
   align-items: center;
-  &_item {
-    margin: 0 16px;
-    cursor: pointer;
-    &:hover{
-      opacity: 0.7;
-    }
+  ul{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+  }
+  ul li{
+    list-style:none;
+    position:relative;
+  }
+  ul li a{
+    position:relative;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:2px;
+    color:transparent;
+    -webkit-text-stroke: 0.7px var(--clr);
+  }
+  ul li a::before{
+    content:attr(data-text);
+    position:absolute;
+    top: 1px;
+    color:var(--clr);
+    width:0px;
+    overflow:hidden;
+    transition: 0.3s;
+  }
+  ul li a:hover::before{
+    width:100%;
   }
 }
